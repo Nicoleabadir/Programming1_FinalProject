@@ -1,3 +1,5 @@
+package Final;
+
 
 /**
  * Décrivez votre classe RatingLibrary ici.

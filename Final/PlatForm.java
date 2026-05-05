@@ -1,3 +1,5 @@
+package Final;
+
 
 /**
  * Enumeration Platform - écrire ici la description de l'énumération

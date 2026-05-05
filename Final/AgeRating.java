@@ -1,3 +1,5 @@
+package Final;
+
 
 /**
  * Enumeration AgeRating - écrire ici la description de l'énumération
