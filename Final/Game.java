@@ -13,41 +13,49 @@ public class Game
     private String title;
     private Genre genre;
     private AgeRating ageRating;
-    private PlatForm platForm;
+    private Platform platform;
     private double rating;
 
     /**
      * Constructeur d'objets de classe Game
      */
-    public Game(int id, String title, Genre genre, AgeRating ageRating, PlatForm platForm)
+    
+    public Game(int id, String title, Genre genre, AgeRating ageRating, Platform platform)
     {
         this.id = id;
         this.title = title;
         this.genre = genre;
-        this.platForm = platForm;
+        this.platform = platform;
         this.ageRating = ageRating;
         this.rating = 0; 
         
     }
+    
     public Genre getGenre(){
         return genre;
     }
+    
     public int getId(){
         return id;
     }
+    
     public String getTitle(){
         return title;
     }
+    
     public AgeRating getAgeRating(){
         return ageRating;
     }
-    public PlatForm getPlatForm(){
-        return platForm;
+    
+    public Platform getPlatform(){
+        return platform;
     }
+    
     public double getRating() {
         return rating;
     }
+    
     public String printDetail(){
-        return ("ID: " +id+ ", Title: " +title+ ", Genre: " +genre+ ", Plat Form: " +platForm+ ", Age Rating: " +ageRating+ ", Rating: " +rating);
+        return ("ID: " +id+ ", Title: " +title+ ", Genre: " +genre+ ", Plat Form: " +platform+ ", Age Rating: " +ageRating+ ", Rating: " +rating);
     }
 }
