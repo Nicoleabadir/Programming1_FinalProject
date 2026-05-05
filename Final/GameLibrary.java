@@ -19,8 +19,8 @@ public class GameLibrary
         games = new HashMap<>();
         
     }
-    public void addGame(String title, Genre genre, AgeRating ageRating, PlatForm platForm){
-        Game g = new Game(nextId, title, genre, ageRating , platForm);
+    public void addGame(String title, Genre genre, AgeRating ageRating, Platform platform){
+        Game g = new Game(nextId, title, genre, ageRating , platform);
         nextId++;
     }
     public void printLibraryDetails(){
@@ -61,10 +61,10 @@ public class GameLibrary
             index++;
         }
     }
-    public void listByPlatform(PlatForm platForm){
+    public void listByPlatform(Platform platForm){
         for (Game key: games.values()){
-            if(key.getPlatForm() == platForm){
-                System.out.println(key.getId()+ "-----" +key.getTitle() +"____"+key.getPlatForm());
+            if(key.getPlatform() == platForm){
+                System.out.println(key.getId()+ "-----" +key.getTitle() +"____"+key.getPlatform());
             }
         }
     }

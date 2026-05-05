@@ -7,7 +7,7 @@ package Final;
  * @author (votre nom)
  * @version (numéro de version ou date)
  */
-public enum Platform
+ enum Platform
 {
     LUNDI, MARDI, MERCREDI, JEUDI, VENDREDI, SAMEDI, DIMANCHE
 }

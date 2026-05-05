@@ -10,7 +10,7 @@ package Final;
 public class GameSession
 {
     // variables d'instance - remplacez l'exemple qui suit par le vôtre
-    private int x;
+    private Game game;
 
     /**
      * Constructeur d'objets de classe GameSession
@@ -18,7 +18,7 @@ public class GameSession
     public GameSession()
     {
         // initialisation des variables d'instance
-        x = 0;
+        
     }
 
     /**
@@ -27,9 +27,5 @@ public class GameSession
      * @param  y   le paramètre de la méthode
      * @return     la somme de x et de y
      */
-    public int sampleMethod(int y)
-    {
-        // Insérez votre code ici
-        return x + y;
-    }
+
 }
