@@ -15,8 +15,6 @@ public class Game
     private AgeRating ageRating;
     private PlatForm platForm;
     private double rating;
-    
-    
 
     /**
      * Constructeur d'objets de classe Game
@@ -34,20 +32,22 @@ public class Game
     public Genre getGenre(){
         return genre;
     }
-    public int getId() {
+    public int getId(){
         return id;
     }
-    public String getTitle() {
+    public String getTitle(){
         return title;
     }
-    public AgeRating getAgeRating() {
+    public AgeRating getAgeRating(){
         return ageRating;
     }
-    public PlatForm getPlatForm() {
+    public PlatForm getPlatForm(){
         return platForm;
     }
     public double getRating() {
         return rating;
     }
-
+    public String printDetail(){
+        return ("ID: " +id+ ", Title: " +title+ ", Genre: " +genre+ ", Plat Form: " +platForm+ ", Age Rating: " +ageRating+ ", Rating: " +rating);
+    }
 }

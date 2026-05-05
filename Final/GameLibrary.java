@@ -29,11 +29,27 @@ public class GameLibrary
         System.out.println("The next item will have "+nextId+ " :ID");
         System.out.println("==============================================");
     }
-    
+    public void searchByTitle(String name){
+        name = name.toLowerCase();
+        //if (g.getTitle().toLowerCase().contains(text))
+        for(Game g : games.values()){    
+            if(g.getTitle().toLowerCase().startsWith(name)){
+                System.out.println(g.getId() +" ---------- "+g.getTitle());
+            }
+        }
+    }
+    public void printGamesDetails(String name){
+        name = name.toLowerCase();
+        for(Game g : games.values()){    
+            if(g.getTitle().toLowerCase().startsWith(name)){
+                System.out.println(g.printDetail());
+            }
+        }
+    }
     public void listAllGames(){
         
         for(Integer id: games.keySet()){
-            System.out.println(id +"-------"+ games.get(id));
+            System.out.println(id +"-------"+ games.get(id).getTitle());
         }
     }
     public void listByGenre(Genre genre){
@@ -45,5 +61,25 @@ public class GameLibrary
             index++;
         }
     }
-    
+    public void listByPlatform(PlatForm platForm){
+        for (Game key: games.values()){
+            if(key.getPlatForm() == platForm){
+                System.out.println(key.getId()+ "-----" +key.getTitle() +"____"+key.getPlatForm());
+            }
+        }
+    }
+    public void listByAgeRating(AgeRating ageRating){
+        for (Game key: games.values()){
+            if(key.getAgeRating() == ageRating){
+                System.out.println(key.getId()+ "-----" +key.getTitle() +"____"+key.getAgeRating());
+            }
+        }
+    }
+    public void listByRating(double rating){
+        for (Game key: games.values()){
+            if(key.getRating() == rating){
+                System.out.println(key.getId()+ "-----" +key.getTitle() +"____"+key.getRating());
+            }
+        }
+    }
 }
