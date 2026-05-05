@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=GameLibrary
+comment0.text=\r\n\ D\u00E9crivez\ votre\ classe\ GameLibrary\ ici.\r\n\r\n\ @author\ (votre\ nom)\r\n\ @version\ (un\ num\u00E9ro\ de\ version\ ou\ une\ date)\r\n
+comment1.params=
+comment1.target=GameLibrary()
+comment2.params=title\ genre\ ageRating\ platForm
+comment2.target=void\ addGame(java.lang.String,\ Genre,\ AgeRating,\ PlatForm)
+comment3.params=
+comment3.target=void\ printLibraryDetails()
+comment4.params=
+comment4.target=void\ listAllGames()
+comment5.params=genre
+comment5.target=void\ listByGenre(Genre)
+numComments=6

@@ -1,0 +1,11 @@
+
+/**
+ * Enumeration Genre - écrire ici la description de l'énumération
+ *
+ * @author (votre nom)
+ * @version (numéro de version ou date)
+ */
+public enum Genre
+{
+    LUNDI, MARDI, MERCREDI, JEUDI, VENDREDI, SAMEDI, DIMANCHE
+}
