@@ -2,12 +2,12 @@ package Final;
 
 
 /**
- * Enumeration Platform - écrire ici la description de l'énumération
+ * Enumeration class Platform - write a description of the enum class here
  *
- * @author (Pamjot Singh Pannu)
- * @version (numéro de version ou date)
+ * @author (Pamjot)
+ * @version (version number or date here)
  */
- enum Platform
+public enum Platform
 {
     PS5,
     PC,
