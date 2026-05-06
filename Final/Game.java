@@ -1,10 +1,11 @@
 package Final;
+import java.util.*;
 
 
 /**
  * Décrivez votre classe Game ici.
  *
- * @author (votre nom)
+ * @author (Pamjot et Nicole)
  * @version (un numéro de version ou une date)
  */
 public class Game
@@ -13,14 +14,14 @@ public class Game
     private String title;
     private Genre genre;
     private AgeRating ageRating;
-    private Platform platform;
+    private PlatForm platform;
     private double rating;
 
     /**
      * Constructeur d'objets de classe Game
      */
     
-    public Game(int id, String title, Genre genre, AgeRating ageRating, Platform platform)
+    public Game(int id, String title, Genre genre, AgeRating ageRating, PlatForm platform)
     {
         this.id = id;
         this.title = title;
@@ -47,15 +48,15 @@ public class Game
         return ageRating;
     }
     
-    public Platform getPlatform(){
+    public PlatForm getPlatform(){
         return platform;
     }
     
     public double getRating() {
         return rating;
     }
-    
-    public String printDetail(){
+
+    public String toString(){
         return ("ID: " +id+ ", Title: " +title+ ", Genre: " +genre+ ", Plat Form: " +platform+ ", Age Rating: " +ageRating+ ", Rating: " +rating);
     }
 }

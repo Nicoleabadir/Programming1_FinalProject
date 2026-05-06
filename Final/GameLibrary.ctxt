@@ -1,12 +1,12 @@
 #BlueJ class context
 comment0.target=GameLibrary
-comment0.text=\n\ D\u00E9crivez\ votre\ classe\ GameLibrary\ ici.\n\n\ @author\ (votre\ nom)\n\ @version\ (un\ num\u00E9ro\ de\ version\ ou\ une\ date)\n
+comment0.text=\r\n\ D\u00E9crivez\ votre\ classe\ GameLibrary\ ici.\r\n\r\n\ @author\ (Pamjot)\r\n\ @version\ (un\ num\u00E9ro\ de\ version\ ou\ une\ date)\r\n
 comment1.params=
 comment1.target=GameLibrary()
 comment10.params=rating
 comment10.target=void\ listByRating(double)
 comment2.params=title\ genre\ ageRating\ platform
-comment2.target=void\ addGame(java.lang.String,\ Genre,\ AgeRating,\ Platform)
+comment2.target=void\ addGame(java.lang.String,\ Genre,\ AgeRating,\ PlatForm)
 comment3.params=
 comment3.target=void\ printLibraryDetails()
 comment4.params=name
@@ -18,7 +18,7 @@ comment6.target=void\ listAllGames()
 comment7.params=genre
 comment7.target=void\ listByGenre(Genre)
 comment8.params=platForm
-comment8.target=void\ listByPlatform(Platform)
+comment8.target=void\ listByPlatform(PlatForm)
 comment9.params=ageRating
 comment9.target=void\ listByAgeRating(AgeRating)
 numComments=11

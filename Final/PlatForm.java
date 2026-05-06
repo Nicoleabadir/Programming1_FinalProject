@@ -7,7 +7,12 @@ package Final;
  * @author (votre nom)
  * @version (numéro de version ou date)
  */
- enum Platform
+ enum PlatForm
 {
-    LUNDI, MARDI, MERCREDI, JEUDI, VENDREDI, SAMEDI, DIMANCHE
+    PC,
+    PLAYSTATION,
+    XBOX,
+    NINTENDO_SWITCH,
+    MOBILE;
+
 }

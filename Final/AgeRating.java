@@ -9,5 +9,13 @@ package Final;
  */
 public enum AgeRating
 {
-    LUNDI, MARDI, MERCREDI, JEUDI, VENDREDI, SAMEDI, DIMANCHE
+    EVERYONE,
+    EVERYONE_10_PLUS,
+    TEEN,
+    MATURE,
+    ADULTS_ONLY,
+    RATING_PENDING,
+    KIDS,
+    FAMILY;
+
 }

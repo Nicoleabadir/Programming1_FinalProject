@@ -5,7 +5,7 @@ import java.util.HashMap;
 /**
  * Décrivez votre classe GameLibrary ici.
  *
- * @author (votre nom)
+ * @author (Pamjot)
  * @version (un numéro de version ou une date)
  */
 public class GameLibrary
@@ -19,7 +19,7 @@ public class GameLibrary
         games = new HashMap<>();
         
     }
-    public void addGame(String title, Genre genre, AgeRating ageRating, Platform platform){
+    public void addGame(String title, Genre genre, AgeRating ageRating, PlatForm platform){
         Game g = new Game(nextId, title, genre, ageRating , platform);
         nextId++;
     }
@@ -42,7 +42,7 @@ public class GameLibrary
         name = name.toLowerCase();
         for(Game g : games.values()){    
             if(g.getTitle().toLowerCase().startsWith(name)){
-                System.out.println(g.printDetail());
+                System.out.println(g.toString());
             }
         }
     }
@@ -53,15 +53,22 @@ public class GameLibrary
         }
     }
     public void listByGenre(Genre genre){
+        /**int index = 0;
+        while (index < games.size()){
+            if(games.get(index).getGenre() == genre){
+                System.out.println(games.get(index));
+            }
+            index++;
+        **/
         int index = 0;
         while (index < games.size()){
             if(games.get(index).getGenre() == genre){
                 System.out.println(games.get(index));
             }
             index++;
+        }   
         }
-    }
-    public void listByPlatform(Platform platForm){
+    public void listByPlatform(PlatForm platForm){
         for (Game key: games.values()){
             if(key.getPlatform() == platForm){
                 System.out.println(key.getId()+ "-----" +key.getTitle() +"____"+key.getPlatform());

@@ -4,7 +4,7 @@ package Final;
 /**
  * Décrivez votre classe GameSession ici.
  *
- * @author (votre nom)
+ * @author (Pamjot)
  * @version (un numéro de version ou une date)
  */
 public class GameSession

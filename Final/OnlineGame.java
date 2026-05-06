@@ -15,7 +15,7 @@ public class OnlineGame extends Game
     /**
      * Constructor for objects of class OnlineGame
      */
-    public OnlineGame(int id, String title, Genre genre, Platform platform, AgeRating ageRating)
+    public OnlineGame(int id, String title, Genre genre, PlatForm platform, AgeRating ageRating)
     {
         // initialise instance variables
         super(id, title, genre, ageRating, platform);

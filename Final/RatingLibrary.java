@@ -4,7 +4,7 @@ package Final;
 /**
  * Décrivez votre classe RatingLibrary ici.
  *
- * @author (votre nom)
+ * @author (Pamjot)
  * @version (un numéro de version ou une date)
  */
 public class RatingLibrary
