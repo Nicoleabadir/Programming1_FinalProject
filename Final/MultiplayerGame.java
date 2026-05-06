@@ -17,7 +17,7 @@ public class MultiplayerGame extends Game
     /**
      * Constructor for objects of class MultiplayerGame
      */
-        public MultiplayerGame(int id,String title, Genre genre, PlatForm platform, AgeRating ageRating, int maxPlayers)
+        public MultiplayerGame(int id,String title, Genre genre, Platform platform, AgeRating ageRating, int maxPlayers)
     {
         // initialise instance variables
         super(id, title, genre, ageRating, platform);

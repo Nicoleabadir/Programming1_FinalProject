@@ -9,9 +9,6 @@ package Final;
  */
 public enum Genre
 {
-<<<<<<< HEAD
-    ACTION, RPG, SPORTS
-=======
     ACTION,
     ADVENTURE,
     RPG,
@@ -33,6 +30,4 @@ public enum Genre
     PARTY,
     CARD_GAME,
     BOARD_GAME;
-
->>>>>>> 690d2de20da9de20ae7bccefb26e9c45765e8e34
 }

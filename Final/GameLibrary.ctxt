@@ -1,7 +1,6 @@
 #BlueJ class context
 comment0.target=GameLibrary
-<<<<<<< HEAD
-comment0.text=\n\ D\u00E9crivez\ votre\ classe\ GameLibrary\ ici.\n\n\ @author\ (Pamjot\ Singh\ Pannu)\n\ @version\ (un\ num\u00E9ro\ de\ version\ ou\ une\ date)\n
+comment0.text=\n\ D\u00E9crivez\ votre\ classe\ GameLibrary\ ici.\n\n<<<<<<<\ HEAD\n\ @author\ (Pamjot\ Singh\ Pannu)\n\=\=\=\=\=\=\=\n\ @author\ (Pamjot)\n>>>>>>>\ 690d2de20da9de20ae7bccefb26e9c45765e8e34\n\ @version\ (un\ num\u00E9ro\ de\ version\ ou\ une\ date)\n
 comment1.params=
 comment1.target=GameLibrary()
 comment10.params=platForm
@@ -12,21 +11,11 @@ comment12.params=rating
 comment12.target=void\ listByRating(double)
 comment2.params=game
 comment2.target=void\ addGame(Game)
-=======
-comment0.text=\r\n\ D\u00E9crivez\ votre\ classe\ GameLibrary\ ici.\r\n\r\n\ @author\ (Pamjot)\r\n\ @version\ (un\ num\u00E9ro\ de\ version\ ou\ une\ date)\r\n
-comment1.params=
-comment1.target=GameLibrary()
-comment10.params=rating
-comment10.target=void\ listByRating(double)
-comment2.params=title\ genre\ ageRating\ platform
-comment2.target=void\ addGame(java.lang.String,\ Genre,\ AgeRating,\ PlatForm)
->>>>>>> 690d2de20da9de20ae7bccefb26e9c45765e8e34
 comment3.params=
 comment3.target=int\ getNumberOfGames()
 comment4.params=
 comment4.target=void\ printLibraryDetails()
 comment5.params=name
-<<<<<<< HEAD
 comment5.target=void\ searchByTitle(java.lang.String)
 comment6.params=name
 comment6.target=void\ printGamesDetails(java.lang.String)
@@ -37,15 +26,3 @@ comment8.target=void\ listByGenre(Genre)
 comment9.params=
 comment9.target=Game\ getTopRatedGame()
 numComments=13
-=======
-comment5.target=void\ printGamesDetails(java.lang.String)
-comment6.params=
-comment6.target=void\ listAllGames()
-comment7.params=genre
-comment7.target=void\ listByGenre(Genre)
-comment8.params=platForm
-comment8.target=void\ listByPlatform(PlatForm)
-comment9.params=ageRating
-comment9.target=void\ listByAgeRating(AgeRating)
-numComments=11
->>>>>>> 690d2de20da9de20ae7bccefb26e9c45765e8e34

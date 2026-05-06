@@ -1,13 +1,9 @@
 #BlueJ class context
 comment0.target=MultiplayerGame
-<<<<<<< HEAD
 comment0.text=\n\ Write\ a\ description\ of\ class\ MultiplayerGame\ here.\n\n\ @author\ (Nicole\ Abadir)\n\ @version\ (a\ version\ number\ or\ a\ date)\n
-=======
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ MultiplayerGame\ here.\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
->>>>>>> 690d2de20da9de20ae7bccefb26e9c45765e8e34
 comment1.params=id\ title\ genre\ platform\ ageRating\ maxPlayers
-comment1.target=MultiplayerGame(int,\ java.lang.String,\ Genre,\ PlatForm,\ AgeRating,\ int)
-comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ MultiplayerGame\r\n
+comment1.target=MultiplayerGame(int,\ java.lang.String,\ Genre,\ Platform,\ AgeRating,\ int)
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ MultiplayerGame\n
 comment2.params=playerName
 comment2.target=void\ addPlayer(java.lang.String)
 comment3.params=
