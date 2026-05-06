@@ -1,10 +1,15 @@
 package Final;
+import java.util.*;
 
 
 /**
  * Décrivez votre classe Game ici.
  *
+<<<<<<< HEAD
  * @author (Nicole Abadir)
+=======
+ * @author (Pamjot et Nicole)
+>>>>>>> 690d2de20da9de20ae7bccefb26e9c45765e8e34
  * @version (un numéro de version ou une date)
  */
 public class Game
@@ -13,14 +18,14 @@ public class Game
     private String title;
     private Genre genre;
     private AgeRating ageRating;
-    private Platform platform;
+    private PlatForm platform;
     private double rating;
 
     /**
      * Constructeur d'objets de classe Game
      */
     
-    public Game(int id, String title, Genre genre, AgeRating ageRating, Platform platform)
+    public Game(int id, String title, Genre genre, AgeRating ageRating, PlatForm platform)
     {
         this.id = id;
         this.title = title;
@@ -47,13 +52,14 @@ public class Game
         return ageRating;
     }
     
-    public Platform getPlatform(){
+    public PlatForm getPlatform(){
         return platform;
     }
     
     public double getRating() {
         return rating;
     }
+<<<<<<< HEAD
     
     public boolean equals(Object obj) {
         if (this == obj){
@@ -74,6 +80,10 @@ public class Game
     }
     
     public String printDetail(){
+=======
+
+    public String toString(){
+>>>>>>> 690d2de20da9de20ae7bccefb26e9c45765e8e34
         return ("ID: " +id+ ", Title: " +title+ ", Genre: " +genre+ ", Plat Form: " +platform+ ", Age Rating: " +ageRating+ ", Rating: " +rating);
     }
 }

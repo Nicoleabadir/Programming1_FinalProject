@@ -5,7 +5,11 @@ import java.util.HashMap;
 /**
  * Décrivez votre classe GameLibrary ici.
  *
+<<<<<<< HEAD
  * @author (Pamjot Singh Pannu)
+=======
+ * @author (Pamjot)
+>>>>>>> 690d2de20da9de20ae7bccefb26e9c45765e8e34
  * @version (un numéro de version ou une date)
  */
 public class GameLibrary
@@ -19,6 +23,7 @@ public class GameLibrary
         games = new HashMap<>();
         
     }
+<<<<<<< HEAD
     public void addGame(Game game) {
        if (game != null) {
         games.put(game.getId(), game);
@@ -26,6 +31,11 @@ public class GameLibrary
     } 
     public int getNumberOfGames() {
         return games.size();
+=======
+    public void addGame(String title, Genre genre, AgeRating ageRating, PlatForm platform){
+        Game g = new Game(nextId, title, genre, ageRating , platform);
+        nextId++;
+>>>>>>> 690d2de20da9de20ae7bccefb26e9c45765e8e34
     }
     public void printLibraryDetails(){
         System.out.println("======= Game Library Details =================");
@@ -46,7 +56,7 @@ public class GameLibrary
         name = name.toLowerCase();
         for(Game g : games.values()){    
             if(g.getTitle().toLowerCase().startsWith(name)){
-                System.out.println(g.printDetail());
+                System.out.println(g.toString());
             }
         }
     }
@@ -57,13 +67,22 @@ public class GameLibrary
         }
     }
     public void listByGenre(Genre genre){
+        /**int index = 0;
+        while (index < games.size()){
+            if(games.get(index).getGenre() == genre){
+                System.out.println(games.get(index));
+            }
+            index++;
+        **/
         int index = 0;
         while (index < games.size()){
             if(games.get(index).getGenre() == genre){
                 System.out.println(games.get(index));
             }
             index++;
+        }   
         }
+<<<<<<< HEAD
     }
     public Game getTopRatedGame() {
         if (games.size() == 0) {
@@ -81,6 +100,9 @@ public class GameLibrary
         return topGame;
     }
     public void listByPlatform(Platform platForm){
+=======
+    public void listByPlatform(PlatForm platForm){
+>>>>>>> 690d2de20da9de20ae7bccefb26e9c45765e8e34
         for (Game key: games.values()){
             if(key.getPlatform() == platForm){
                 System.out.println(key.getId()+ "-----" +key.getTitle() +"____"+key.getPlatform());

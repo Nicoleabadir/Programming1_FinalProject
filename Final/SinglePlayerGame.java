@@ -15,7 +15,7 @@ public class SinglePlayerGame extends Game
     /**
      * Constructor for objects of class SinglePlayerGame
      */
-   public SinglePlayerGame(int id, String title, Genre genre, Platform  platform, AgeRating ageRating, boolean storyMode)
+   public SinglePlayerGame(int id, String title, Genre genre, PlatForm  platform, AgeRating ageRating, boolean storyMode)
     {
         // initialise instance variables
         super(id, title, genre, ageRating, platform);

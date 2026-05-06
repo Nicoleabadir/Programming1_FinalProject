@@ -1,10 +1,15 @@
 #BlueJ package file
+<<<<<<< HEAD
 dependency1.from=OnlineGame
+=======
+dependency1.from=MultiplayerGame
+>>>>>>> 690d2de20da9de20ae7bccefb26e9c45765e8e34
 dependency1.to=Genre
 dependency1.type=UsesDependency
 dependency10.from=RatingLibrary
 dependency10.to=Game
 dependency10.type=UsesDependency
+<<<<<<< HEAD
 dependency11.from=GameTest
 dependency11.to=Game
 dependency11.type=UsesDependency
@@ -60,17 +65,52 @@ dependency27.from=GameSession
 dependency27.to=Game
 dependency27.type=UsesDependency
 dependency3.from=OnlineGame
+=======
+dependency11.from=GameSession
+dependency11.to=Game
+dependency11.type=UsesDependency
+dependency12.from=Game
+dependency12.to=Genre
+dependency12.type=UsesDependency
+dependency13.from=Game
+dependency13.to=AgeRating
+dependency13.type=UsesDependency
+dependency14.from=Game
+dependency14.to=PlatForm
+dependency14.type=UsesDependency
+dependency15.from=GameLibrary
+dependency15.to=Game
+dependency15.type=UsesDependency
+dependency16.from=GameLibrary
+dependency16.to=Genre
+dependency16.type=UsesDependency
+dependency17.from=GameLibrary
+dependency17.to=AgeRating
+dependency17.type=UsesDependency
+dependency18.from=GameLibrary
+dependency18.to=PlatForm
+dependency18.type=UsesDependency
+dependency2.from=MultiplayerGame
+dependency2.to=PlatForm
+dependency2.type=UsesDependency
+dependency3.from=MultiplayerGame
+>>>>>>> 690d2de20da9de20ae7bccefb26e9c45765e8e34
 dependency3.to=AgeRating
 dependency3.type=UsesDependency
 dependency4.from=SinglePlayerGame
 dependency4.to=Genre
 dependency4.type=UsesDependency
 dependency5.from=SinglePlayerGame
+<<<<<<< HEAD
 dependency5.to=Platform
+=======
+dependency5.to=PlatForm
+>>>>>>> 690d2de20da9de20ae7bccefb26e9c45765e8e34
 dependency5.type=UsesDependency
 dependency6.from=SinglePlayerGame
 dependency6.to=AgeRating
 dependency6.type=UsesDependency
+<<<<<<< HEAD
 dependency7.from=MultiplayerGame
 dependency7.to=Genre
 dependency7.type=UsesDependency
@@ -92,6 +132,29 @@ package.frame.height=983
 package.frame.width=1021
 package.numDependencies=27
 package.numTargets=12
+=======
+dependency7.from=OnlineGame
+dependency7.to=Genre
+dependency7.type=UsesDependency
+dependency8.from=OnlineGame
+dependency8.to=PlatForm
+dependency8.type=UsesDependency
+dependency9.from=OnlineGame
+dependency9.to=AgeRating
+dependency9.type=UsesDependency
+objectbench.height=127
+objectbench.width=1274
+package.divider.horizontal=0.6
+package.divider.vertical=0.7869198312236286
+package.editor.height=476
+package.editor.width=1143
+package.editor.x=2772
+package.editor.y=139
+package.frame.height=730
+package.frame.width=1312
+package.numDependencies=18
+package.numTargets=10
+>>>>>>> 690d2de20da9de20ae7bccefb26e9c45765e8e34
 package.showExtends=true
 package.showUses=true
 readme.height=60
@@ -142,12 +205,12 @@ target3.width=120
 target3.x=730
 target3.y=320
 target4.height=70
-target4.name=Platform
+target4.name=AgeRating
 target4.showInterface=false
 target4.type=EnumTarget
 target4.width=120
 target4.x=250
-target4.y=140
+target4.y=370
 target5.height=70
 target5.name=SinglePlayerGame
 target5.showInterface=false
@@ -156,6 +219,7 @@ target5.width=130
 target5.x=820
 target5.y=720
 target6.height=70
+<<<<<<< HEAD
 target6.name=GameLibraryTest
 target6.showInterface=false
 target6.type=UnitTestTargetJunit5
@@ -173,15 +237,44 @@ target7.y=350
 target8.association=GameLibraryTest
 target8.height=70
 target8.name=GameLibrary
+=======
+target6.name=RatingLibrary
+target6.showInterface=false
+target6.type=ClassTarget
+target6.width=120
+target6.x=1390
+target6.y=320
+target7.height=70
+target7.name=MultiplayerGame
+target7.showInterface=false
+target7.type=ClassTarget
+target7.width=130
+target7.x=1070
+target7.y=670
+target8.height=70
+target8.name=PlatForm
+>>>>>>> 690d2de20da9de20ae7bccefb26e9c45765e8e34
 target8.showInterface=false
-target8.type=ClassTarget
+target8.type=EnumTarget
 target8.width=120
+<<<<<<< HEAD
 target8.x=1150
 target8.y=60
+=======
+target8.x=250
+target8.y=140
+>>>>>>> 690d2de20da9de20ae7bccefb26e9c45765e8e34
 target9.height=70
 target9.name=AgeRating
 target9.showInterface=false
+<<<<<<< HEAD
 target9.type=EnumTarget
 target9.width=120
 target9.x=250
 target9.y=370
+=======
+target9.type=ClassTarget
+target9.width=140
+target9.x=820
+target9.y=720
+>>>>>>> 690d2de20da9de20ae7bccefb26e9c45765e8e34
