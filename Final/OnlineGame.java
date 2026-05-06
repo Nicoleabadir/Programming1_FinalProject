@@ -4,7 +4,7 @@ package Final;
 /**
  * Write a description of class OnlineGame here.
  *
- * @author (your name)
+ * @author (Nicole Abadir)
  * @version (a version number or a date)
  */
 public class OnlineGame extends Game

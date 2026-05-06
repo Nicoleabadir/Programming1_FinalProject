@@ -4,10 +4,10 @@ package Final;
 /**
  * Enumeration Genre - écrire ici la description de l'énumération
  *
- * @author (votre nom)
+ * @author (Pamjot Singh Pannu)
  * @version (numéro de version ou date)
  */
 public enum Genre
 {
-    LUNDI, MARDI, MERCREDI, JEUDI, VENDREDI, SAMEDI, DIMANCHE
+    ACTION, RPG, SPORTS
 }

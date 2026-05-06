@@ -4,7 +4,7 @@ package Final;
 /**
  * Write a description of class SinglePlayerGame here.
  *
- * @author (your name)
+ * @author (Nicole Abadir)
  * @version (a version number or a date)
  */
 public class SinglePlayerGame extends Game

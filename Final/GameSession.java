@@ -4,28 +4,31 @@ package Final;
 /**
  * Décrivez votre classe GameSession ici.
  *
- * @author (votre nom)
+ * @author (Pamjot Singh Pannu)
  * @version (un numéro de version ou une date)
  */
 public class GameSession
 {
     // variables d'instance - remplacez l'exemple qui suit par le vôtre
     private Game game;
+    private int duration;
 
     /**
      * Constructeur d'objets de classe GameSession
      */
-    public GameSession()
+    public GameSession(Game game, int duration)
     {
         // initialisation des variables d'instance
-        
+        this.game = game;
+        this.duration = duration;
+
     }
-
-    /**
-     * Un exemple de méthode - remplacez ce commentaire par le vôtre
-     *
-     * @param  y   le paramètre de la méthode
-     * @return     la somme de x et de y
-     */
-
+    
+    public void startSession() {
+        System.out.println("Starting session for " + game.getTitle());
+    } 
+    
+     public String toString() {
+        return "Game: " + game.getTitle() + ", Duration: " + duration + " minutes";
+    }
 }

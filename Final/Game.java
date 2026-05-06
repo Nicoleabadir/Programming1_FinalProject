@@ -4,7 +4,7 @@ package Final;
 /**
  * Décrivez votre classe Game ici.
  *
- * @author (votre nom)
+ * @author (Nicole Abadir)
  * @version (un numéro de version ou une date)
  */
 public class Game
@@ -53,6 +53,24 @@ public class Game
     
     public double getRating() {
         return rating;
+    }
+    
+    public boolean equals(Object obj) {
+        if (this == obj){
+            return true;
+        }
+        if (!(obj instanceof Game)){
+            return false;
+        }
+
+        Game other = (Game) obj;
+        return this.title.equals(other.title);
+    }
+    
+    public void setRating(int rating) {
+        if (rating >= 0 && rating <= 10) {
+            this.rating = rating;
+        }
     }
     
     public String printDetail(){

@@ -5,7 +5,7 @@ import java.util.ArrayList;
 /**
  * Write a description of class MultiplayerGame here.
  *
- * @author (your name)
+ * @author (Nicole Abadir)
  * @version (a version number or a date)
  */
 public class MultiplayerGame extends Game

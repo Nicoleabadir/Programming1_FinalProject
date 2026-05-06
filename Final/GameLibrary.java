@@ -5,7 +5,7 @@ import java.util.HashMap;
 /**
  * Décrivez votre classe GameLibrary ici.
  *
- * @author (votre nom)
+ * @author (Pamjot Singh Pannu)
  * @version (un numéro de version ou une date)
  */
 public class GameLibrary
@@ -19,9 +19,13 @@ public class GameLibrary
         games = new HashMap<>();
         
     }
-    public void addGame(String title, Genre genre, AgeRating ageRating, Platform platform){
-        Game g = new Game(nextId, title, genre, ageRating , platform);
-        nextId++;
+    public void addGame(Game game) {
+       if (game != null) {
+        games.put(game.getId(), game);
+       }
+    } 
+    public int getNumberOfGames() {
+        return games.size();
     }
     public void printLibraryDetails(){
         System.out.println("======= Game Library Details =================");
@@ -60,6 +64,21 @@ public class GameLibrary
             }
             index++;
         }
+    }
+    public Game getTopRatedGame() {
+        if (games.size() == 0) {
+             return null;
+         }
+
+        Game topGame = null;
+
+        for (Game game : games.values()) {
+            if (topGame == null || game.getRating() > topGame.getRating()) {
+                 topGame = game;
+            }
+        }
+
+        return topGame;
     }
     public void listByPlatform(Platform platForm){
         for (Game key: games.values()){
