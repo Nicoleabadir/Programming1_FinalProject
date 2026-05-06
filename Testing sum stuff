@@ -1,0 +1,163 @@
+================================================================================
+UML DIAGRAM (ASCII VERSION)
+================================================================================
+
+Below is a simplified UML diagram in text form. It shows the structure of the
+project, the relationships between classes, and the inheritance hierarchy.
+
+--------------------------------------------------------------------------------
+                                +----------------+
+                                |     Game       |
+                                +----------------+
+                                | - id           |
+                                | - title        |
+                                | - genre        |
+                                | - platform     |
+                                | - ageRating    |
+                                | - rating       |
+                                +----------------+
+                                | + getters      |
+                                | + rateGame()   |
+                                | + toString()   |
+                                +----------------+
+                                         ^
+                                         |
+        -----------------------------------------------------------------
+        |                               |                               |
+        |                               |                               |
++-----------------------+   +-----------------------+   +-----------------------+
+|   SinglePlayerGame    |   |     OnlineGame        |   |   MultiplayerGame     |
++-----------------------+   +-----------------------+   +-----------------------+
+| - storyMode           |   | - requiresInternet    |   | - maxPlayers          |
++-----------------------+   +-----------------------+   | - players[]           |
+| + startSolo()         |   | + startOnline()       |   +-----------------------+
+| + toString()          |   | + toString()          |   | + addPlayer()         |
++-----------------------+   +-----------------------+   | + listAllPlayers()     |
+                                                        | + startMultiplayer()   |
+                                                        | + toString()           |
+                                                        +------------------------+
+
+--------------------------------------------------------------------------------
++-----------------------+
+|     GameLibrary       |
++-----------------------+
+| - games : HashMap     |
+| - nextId              |
++-----------------------+
+| + addGame()           |
+| + list()              |
+| + listByGenre()       |
+| + listByPlatform()    |
+| + listByRating()      |
+| + search()            |
+| + printLibraryDetails()|
++-----------------------+
+
+--------------------------------------------------------------------------------
++-----------------------+
+|    GameSession        |
++-----------------------+
+| - game                |
+| - duration            |
++-----------------------+
+| + startSession()      |
+| + toString()          |
++-----------------------+
+
+--------------------------------------------------------------------------------
++-----------------------+
+|    RatingLibrary      |
++-----------------------+
+| - ratings : HashMap   |
+| - comments : HashMap  |
++-----------------------+
+| + rateGame()          |
+| + addComments()       |
+| + printWritings()     |
++-----------------------+
+
+--------------------------------------------------------------------------------
+ENUMS
+--------------------------------------------------------------------------------
+Genre       -> ACTION, RPG, SPORTS, ...
+Platform    -> PC, PS5, XBOX, ...
+AgeRating   -> KIDS, TEEN, ADULT
+
+================================================================================
+HOW TO RUN THE PROGRAM
+================================================================================
+
+Follow these steps to run the project in BlueJ or any Java environment.
+
+--------------------------------------------------------------------------------
+1. OPEN THE PROJECT
+--------------------------------------------------------------------------------
+- Launch BlueJ
+- Open the folder containing all .java files
+
+--------------------------------------------------------------------------------
+2. COMPILE ALL CLASSES
+--------------------------------------------------------------------------------
+- Click "Compile" (top-left)
+- Ensure no errors appear
+- If errors appear, recompile classes in this order:
+      Enums → Game → Subclasses → GameLibrary → RatingLibrary → GameSession
+
+--------------------------------------------------------------------------------
+3. CREATE A GAMELIBRARY OBJECT
+--------------------------------------------------------------------------------
+- Right-click GameLibrary
+- Select:  new GameLibrary()
+
+This object will store all games.
+
+--------------------------------------------------------------------------------
+4. ADD GAMES TO THE LIBRARY
+--------------------------------------------------------------------------------
+Use the GameLibrary methods:
+
+- addGame(title, genre, ageRating, platform)
+- or create subclass objects manually:
+      new SinglePlayerGame(...)
+      new OnlineGame(...)
+      new MultiplayerGame(...)
+
+Then insert them into the library if needed.
+
+--------------------------------------------------------------------------------
+5. SEARCH, FILTER, AND LIST GAMES
+--------------------------------------------------------------------------------
+Use:
+- list()
+- listByGenre()
+- listByPlatform()
+- listByRating()
+- search()
+
+--------------------------------------------------------------------------------
+6. START A GAME SESSION
+--------------------------------------------------------------------------------
+- Create a GameSession object:
+      new GameSession(game, duration)
+
+- Call:
+      startSession()
+
+--------------------------------------------------------------------------------
+7. RATE GAMES OR ADD COMMENTS
+--------------------------------------------------------------------------------
+- Create RatingLibrary
+- Use:
+      rateGame(game, rating)
+      addComments(game, "text")
+      printWritings(game)
+
+--------------------------------------------------------------------------------
+8. VIEW DETAILS
+--------------------------------------------------------------------------------
+- Call toString() on any Game or subclass
+- Call printLibraryDetails() on GameLibrary
+
+================================================================================
+END OF DOCUMENT
+================================================================================
