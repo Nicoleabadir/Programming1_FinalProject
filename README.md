@@ -58,6 +58,15 @@ Game library class is the "database" all the game will be created and stored her
 the filed for this class are 
 games            →  HashMap storing all the Game objects <Interger Game> Every game will have a id and the norme filed form the game class
 NextId           → automatically assigns unique IDs because HashMap does not work with index so this would be responsible for making sure unique Ids for every game.
+Key: 1
+Value: Game object
+       ├── id = 1
+       ├── title = "Minecraft"
+       ├── genre = ADVENTURE
+       ├── platform = PC
+       ├── ageRating = KIDS
+       └── rating = 0
+
 -------------------------------------------------------------------------------------------------
 There are all the required methodes in here for the games.
 
@@ -107,6 +116,7 @@ toString()
 ==========================================================================================================
 Rating library 
 It sotre detail, comments and rating for every game.
+the files would have a hashMap <    Strings>
 --------------------------------------------------
 methodes would be 
 rateGame()       → add a rating
@@ -116,16 +126,89 @@ printWritings()  → show all comments
 =========================================================================================================
 The game class use sum enume for som field
 there are three of them 
+PlatForm: diff Platform
+Genre:    Diff Genre
+AgeRating: Diff age Ratings
+
+===========================================================================================================
+SinglePlayerGame class extends Game 
+It is a game but with extra fieatures 
+---------------------------------------
+Filed
+storyMode : boolean
+Does it have a story mode ?
+--------------------------------------
+SinglePlayerGame(id, title, genre, platform, ageRating, storyMode)
+    super(...) → calls Game constructor
+    this.storyMode = storyMode
+To initialize both the Game part and the SinglePlayerGame‑specific part.
+-----------------------------------------
+Methods 
+startSolo()
+    prints a message saying the single-player game is starting
+
+toString()
+    returns Game’s toString() + storyMode info
+
+----------------------------------------------
+======================================================
+OnlineGame extends Game
+
+requiresInternet : boolean
+
+they use internet so true always
+------------------------------------
+contructore 
+OnlineGame(id, title, genre, platform, ageRating)
+    super(...)
+    requiresInternet = true
+-------------------------------------
+methodes 
+startOnline()
+    prints a message saying the online game is starting
+
+toString()
+    returns Game’s toString() + requiresInternet info
+-----------------------------------------
+===========================================================
+
+MultiplayerGame extends Game
+filed
+maxPlayers : int
+players : ArrayList<String>
+maximum allowed players?
+list of player names currently in the game
+
+---------------------------------------------
+constructore
+MultiplayerGame(id, title, genre, platform, ageRating, maxPlayers)
+    super(...)
+    this.maxPlayers = maxPlayers
+    players = new ArrayList<>()
+-----------------------------------------------
+methodes 
+addPlayer(playerName)
+    if players.size < maxPlayers → add player
+    else → print “Maximum number of players reached.”
+
+listAllPlayers()
+    loops through players and prints each one
+
+startMultiplayer()
+    prints a message saying the multiplayer game is starting
+
+toString()
+    returns Game’s toString() + maxPlayers + current number of players
 
 
+addPlayer() enforces multiplayer rules
 
+listAllPlayers() shows who is currently in the game
 
+startMultiplayer() represents multiplayer behavior
 
-
-
-
-
-
+toString() prints extended details
+-------------------------------------------------
 
 
 
