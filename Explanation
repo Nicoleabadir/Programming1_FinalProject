@@ -1,0 +1,233 @@
+================================================================================
+PROGRAMMING 1 – FINAL PROJECT
+================================================================================
+
+TEAM RESPONSIBILITIES
+--------------------------------------------------------------------------------
+Pamjot:
+    - RatingLibrary
+    - GameLibrary
+    - GameSession
+    - All enumeration types (Genre, Platform, AgeRating)
+
+Nicole:
+    - Game superclass
+    - SinglePlayerGame
+    - OnlineGame
+    - MultiplayerGame
+
+================================================================================
+GAME CLASS
+================================================================================
+
+DESCRIPTION
+--------------------------------------------------------------------------------
+The Game class is the superclass for the entire system. It contains all shared
+fields and behaviors required by every type of game. All fields are private to
+enforce encapsulation.
+
+FIELDS
+--------------------------------------------------------------------------------
+id          -> unique identifier for each game
+title       -> name of the game
+genre       -> game category (Genre enum)
+platform    -> platform the game runs on (Platform enum)
+ageRating   -> age restriction (AgeRating enum)
+rating      -> user rating (0–10)
+
+CONSTRUCTOR
+--------------------------------------------------------------------------------
+public Game(int id, String title, Genre genre, AgeRating ageRating, PlatForm platform) {
+    this.id = id;
+    this.title = title;
+    this.genre = genre;
+    this.platform = platform;
+    this.ageRating = ageRating;
+    this.rating = 0;
+}
+
+METHODS
+--------------------------------------------------------------------------------
+getTitle()
+getGenre()
+getPlatform()
+getAgeRating()
+getRating()
+rateGame(int value)
+
+toString()
+    -> prints all game details in a readable format
+
+================================================================================
+GAME LIBRARY CLASS
+================================================================================
+
+DESCRIPTION
+--------------------------------------------------------------------------------
+GameLibrary acts as the system's database. All games are created, stored, and
+managed here using a HashMap.
+
+FIELDS
+--------------------------------------------------------------------------------
+games  -> HashMap<Integer, Game>
+nextId -> automatically assigns unique IDs
+
+CONSTRUCTOR
+--------------------------------------------------------------------------------
+public GameLibrary() {
+    games = new HashMap<>();
+    nextId = 1;
+}
+
+METHODS
+--------------------------------------------------------------------------------
+addGame(title, genre, ageRating, platform)
+list()
+listByGenre(genre)
+listByPlatform(platform)
+listByRating(rating)
+search(text)
+printLibraryDetails()
+
+================================================================================
+GAME SESSION CLASS
+================================================================================
+
+DESCRIPTION
+--------------------------------------------------------------------------------
+GameSession records and stores information about gameplay sessions.
+
+FIELDS
+--------------------------------------------------------------------------------
+game      -> the game being played
+duration  -> how long the session lasted
+
+CONSTRUCTOR
+--------------------------------------------------------------------------------
+public GameSession(Game game, int duration) {
+    this.game = game;
+    this.duration = duration;
+}
+
+METHODS
+--------------------------------------------------------------------------------
+startSession()
+toString()
+
+================================================================================
+RATING LIBRARY CLASS
+================================================================================
+
+DESCRIPTION
+--------------------------------------------------------------------------------
+RatingLibrary stores ratings, comments, and written feedback for each game.
+
+FIELDS
+--------------------------------------------------------------------------------
+ratings   -> HashMap<Game, Integer>
+comments  -> HashMap<Game, ArrayList<String>>
+
+CONSTRUCTOR
+--------------------------------------------------------------------------------
+public RatingLibrary() {
+    ratings = new HashMap<>();
+    comments = new HashMap<>();
+}
+
+METHODS
+--------------------------------------------------------------------------------
+rateGame(Game game, int rating)
+addComments(Game game, String comment)
+printWritings(Game game)
+
+================================================================================
+ENUMERATION TYPES
+================================================================================
+
+Platform   -> PC, PS5, XBOX, etc.
+Genre      -> ACTION, RPG, SPORTS, etc.
+AgeRating  -> KIDS, TEEN, ADULT
+
+================================================================================
+SINGLEPLAYERGAME CLASS (extends Game)
+================================================================================
+
+FIELDS
+--------------------------------------------------------------------------------
+storyMode : boolean
+
+CONSTRUCTOR
+--------------------------------------------------------------------------------
+public SinglePlayerGame(int id, String title, Genre genre, PlatForm platform,
+                        AgeRating ageRating, boolean storyMode) {
+    super(id, title, genre, ageRating, platform);
+    this.storyMode = storyMode;
+}
+
+METHODS
+--------------------------------------------------------------------------------
+startSolo()
+toString()
+
+================================================================================
+ONLINEGAME CLASS (extends Game)
+================================================================================
+
+FIELDS
+--------------------------------------------------------------------------------
+requiresInternet : boolean (always true)
+
+CONSTRUCTOR
+--------------------------------------------------------------------------------
+public OnlineGame(int id, String title, Genre genre, PlatForm platform,
+                  AgeRating ageRating) {
+    super(id, title, genre, ageRating, platform);
+    this.requiresInternet = true;
+}
+
+METHODS
+--------------------------------------------------------------------------------
+startOnline()
+toString()
+
+================================================================================
+MULTIPLAYERGAME CLASS (extends Game)
+================================================================================
+
+FIELDS
+--------------------------------------------------------------------------------
+maxPlayers : int
+players    : ArrayList<String>
+
+CONSTRUCTOR
+--------------------------------------------------------------------------------
+public MultiplayerGame(int id, String title, Genre genre, PlatForm platform,
+                       AgeRating ageRating, int maxPlayers) {
+    super(id, title, genre, ageRating, platform);
+    this.maxPlayers = maxPlayers;
+    this.players = new ArrayList<>();
+}
+
+METHODS
+--------------------------------------------------------------------------------
+addPlayer(name)
+listAllPlayers()
+startMultiplayer()
+toString()
+
+================================================================================
+CONCLUSION
+================================================================================
+
+This project demonstrates:
+    - Encapsulation
+    - Inheritance
+    - Polymorphism
+    - Association
+    - Use of enums
+    - Use of HashMaps
+
+The system is modular, organized, and follows object‑oriented programming
+principles.
+
+================================================================================
