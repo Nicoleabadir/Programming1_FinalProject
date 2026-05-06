@@ -7,7 +7,7 @@ package Final;
  * @author (Pamjot)
  * @version (version number or date here)
  */
-public enum Platform
+public enum gamePlatForm
 {
     PS5,
     PC,

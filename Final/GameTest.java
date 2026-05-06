@@ -23,15 +23,15 @@ public class GameTest
     }
     
     public void testSetRating() {
-        Game game = new Game(34567, "FIFA", Genre.SPORTS, AgeRating.KIDS, Platform.PS5);
+        Game game = new Game(34567, "FIFA", Genre.SPORTS, AgeRating.KIDS, gamePlatForm.PS5);
         game.setRating(8);
 
         System.out.println(game.getRating()); // expected: 8
     }
     
     public void testEquals() {
-        Game game1 = new Game(34567, "FIFA", Genre.SPORTS, AgeRating.KIDS, Platform.PS5);
-        Game game2 = new Game(34567, "FIFA", Genre.SPORTS, AgeRating.KIDS, Platform.PS5);
+        Game game1 = new Game(34567, "FIFA", Genre.SPORTS, AgeRating.KIDS, gamePlatForm.PS5);
+        Game game2 = new Game(34567, "FIFA", Genre.SPORTS, AgeRating.KIDS, gamePlatForm.PS5);
 
         System.out.println(game1.equals(game2)); // expected: true
     }

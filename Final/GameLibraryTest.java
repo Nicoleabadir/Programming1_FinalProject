@@ -30,7 +30,7 @@ public class GameLibraryTest
     @BeforeEach
     public void testAddGame() {
         GameLibrary library = new GameLibrary();
-        Game game = new Game(12345, "Minecraft", Genre.ACTION, AgeRating.KIDS, Platform.PC);
+        Game game = new Game(12345, "Minecraft", Genre.ACTION, AgeRating.KIDS, gamePlatForm.PC);
 
         library.addGame(game);
 
@@ -46,8 +46,8 @@ public class GameLibraryTest
     public void testTopRatedGame() {
         GameLibrary library = new GameLibrary();
 
-        Game game1 = new Game(34567, "FIFA", Genre.SPORTS, AgeRating.KIDS, Platform.PS5);
-        Game game2 = new Game(12345, "Minecraft", Genre.ACTION, AgeRating.KIDS, Platform.PC);
+        Game game1 = new Game(34567, "FIFA", Genre.SPORTS, AgeRating.KIDS, gamePlatForm.PS5);
+        Game game2 = new Game(12345, "Minecraft", Genre.ACTION, AgeRating.KIDS, gamePlatForm.PC);
 
         game1.setRating(6);
         game2.setRating(9);

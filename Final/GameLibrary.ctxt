@@ -1,10 +1,10 @@
 #BlueJ class context
 comment0.target=GameLibrary
-comment0.text=\n\ D\u00E9crivez\ votre\ classe\ GameLibrary\ ici.\n\n<<<<<<<\ HEAD\n\ @author\ (Pamjot\ Singh\ Pannu)\n\=\=\=\=\=\=\=\n\ @author\ (Pamjot)\n>>>>>>>\ 690d2de20da9de20ae7bccefb26e9c45765e8e34\n\ @version\ (un\ num\u00E9ro\ de\ version\ ou\ une\ date)\n
+comment0.text=\r\n\ D\u00E9crivez\ votre\ classe\ GameLibrary\ ici.\r\n\r\n<<<<<<<\ HEAD\r\n\ @author\ (Pamjot\ Singh\ Pannu)\r\n\=\=\=\=\=\=\=\r\n\ @author\ (Pamjot)\r\n>>>>>>>\ 690d2de20da9de20ae7bccefb26e9c45765e8e34\r\n\ @version\ (un\ num\u00E9ro\ de\ version\ ou\ une\ date)\r\n
 comment1.params=
 comment1.target=GameLibrary()
-comment10.params=platForm
-comment10.target=void\ listByPlatform(Platform)
+comment10.params=gamePlatForm
+comment10.target=void\ listByPlatform(gamePlatForm)
 comment11.params=ageRating
 comment11.target=void\ listByAgeRating(AgeRating)
 comment12.params=rating

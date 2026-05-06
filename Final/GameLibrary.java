@@ -93,10 +93,10 @@ public class GameLibrary
 
          return topGame;
      }
-    public void listByPlatform(Platform platForm){
+    public void listByPlatform(gamePlatForm gamePlatForm){
           for (Game key: games.values()){
-            if(key.getPlatform() == platForm){
-                System.out.println(key.getId()+ "-----" +key.getTitle() +"____"+key.getPlatform());
+            if(key.getgamePlatForm() == gamePlatForm){
+                System.out.println(key.getId()+ "-----" +key.getTitle() +"____"+key.getgamePlatForm());
             }
         }
       }
