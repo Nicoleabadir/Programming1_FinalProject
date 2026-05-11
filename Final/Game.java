@@ -35,6 +35,10 @@ public class Game
         return genre;
     }
     
+    public boolean matchesGenre(Genre genre) { 
+        return this.genre == genre;
+    }
+    
     public int getId(){
         return id;
     }
@@ -47,12 +51,44 @@ public class Game
         return ageRating;
     }
     
+    public boolean matchesAgeRating(AgeRating ageRating) {
+        return this.ageRating == ageRating;
+    }
+    
     public gamePlatForm getgamePlatForm(){
         return gamePlatForm;
     }
     
+    public boolean matchesPlatform(gamePlatForm platform) {
+        return this.gamePlatForm == platform;
+    }
+    
+    public boolean canPlay() {
+        return true;
+    }
+    
     public double getRating() {
         return rating;
+    }
+    
+    public boolean isTopRated() { 
+        return rating >= 8;
+    }
+    
+    public String getGameType() {
+        return "General Game";
+    }
+    
+    public void startGame() {
+        System.out.println("Starting " + title + "...");
+    }
+    
+    public boolean hasSameTitle(String title) {
+        return this.title.equalsIgnoreCase(title);
+    }
+    
+    public String getShortDescription() {
+        return id + " - " + title + " (" + getGameType() + ")";
     }
 
     public boolean equals(Object obj) {
@@ -67,13 +103,19 @@ public class Game
         return this.title.equals(other.title);
     }
     
-    public void setRating(int rating) {
+    public void setRating(double rating) {
         if (rating >= 0 && rating <= 10) {
             this.rating = rating;
+        } else {
+            System.out.println("Invalid rating. Rating must be between 0 and 10.");
         }
     }
     
-    public String printDetail(){
+    public String printDetails(){
         return ("ID: " +id+ ", Title: " +title+ ", Genre: " +genre+ ", Plat Form: " +gamePlatForm+ ", Age Rating: " +ageRating+ ", Rating: " +rating);
     }
+    
+    public String toString() {
+        return title + " | " + genre + " | " + gamePlatForm + " | Rating: " + rating;
+    }  
 }

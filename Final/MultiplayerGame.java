@@ -25,12 +25,27 @@ public class MultiplayerGame extends Game
         players = new ArrayList<>();
     }
     
-    public void addPlayer(String playerName){
-        if (players.size() < maxPlayers){
-            players.add(playerName);
-        } else{
-            System.out.println("Maximum number of players reached.");
-        }
+    public String getGameType() {
+        return "Multiplayer Game";
+    }
+    
+    public boolean containsPlayer(String playerName) {
+        return players.contains(playerName);
+    }
+    
+    public void addPlayer(String playerName) {
+       if(isFull()) {
+           System.out.println("Maximum number of players reached.");
+       }
+
+       else if(players.contains(playerName)) {
+           System.out.println("Player already exists.");
+       }
+
+       else {
+           players.add(playerName);
+           System.out.println(playerName + " joined the game.");
+       }
     }
     
     public void listAllPlayers(){
@@ -39,11 +54,60 @@ public class MultiplayerGame extends Game
         }
     }
     
-    public void startMultiplyer(){
-        System.out.println("Starting multiplyer game; " + getTitle());
+    public boolean isFull() {
+        return players.size() >= maxPlayers;
+    }
+    
+    public int getCurrentPlayerCount() {
+        return players.size();
+    }
+    
+    public boolean canPlay() {
+       return players.size() >= 2;
+    }
+    
+    public void startMatch() {
+        if(canPlay()) {
+            System.out.println("Match starting...");
+        }
+
+        else {
+            System.out.println("Not enough players.");
+        }
+    }
+    
+    public void removePlayer(String playerName) {
+        if(players.remove(playerName)) {
+            System.out.println(playerName + " left the game.");
+        }
+         else {
+            System.out.println("Player not found.");
+        }
+    }
+    
+    public void kickPlayer(String playerName) {
+        if(players.remove(playerName)) {
+            System.out.println(playerName + " was kicked.");
+        }
+
+        else {
+            System.out.println("Player not found.");
+        }
+    }
+    
+    public void clearPlayers() {
+     players.clear();
+    }
+    
+    public void startGame() {
+     System.out.println("Starting multiplayer game: " + getTitle());
+    }
+    
+    public String printDetails() {
+     return super.printDetails() + ", Max Players: " + maxPlayers + ", Current Players: " + players.size();
     }
     
     public String toString(){
-        return super.toString() + "/ Max Players:" + maxPlayers + "/ Current Players :" + players.size();
+     return super.toString() + "/ Max Players:" + maxPlayers + "/ Current Players :" + players.size();
     }
 }

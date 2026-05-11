@@ -28,11 +28,47 @@ public class SinglePlayerGame extends Game
      * @param  y  a sample parameter for a method
      * @return    the sum of x and y
      */
-    public void startSolo(){
-        System.out.println("Starting single-player game : " + getTitle());
+    public void startGame() {
+       System.out.println("Starting single-player game: " + getTitle());
+   }
+   
+   public String getGameType() {
+       return "Single Player Game";
+   }  
+   
+   public boolean canPlay() {
+       return true;
+   }
+   
+   public void restartGame() {
+       System.out.println(getTitle() + " has restarted from the beginning.");
+   }
+   
+   public void pauseGame() {
+       System.out.println(getTitle() + " is paused.");
+   }
+   
+   public void setStoryMode(boolean storyMode) {
+       this.storyMode = storyMode;
+   }
+   
+   public boolean hasStoryMode() {
+       return storyMode;
+   }
+   
+   public void loadProgress() {
+       System.out.println("Loading saved progress for " + getTitle());
+   }
+   
+   public void saveProgress() {
+       System.out.println("Progress saved for " + getTitle());
+   }
+   
+   public String printDetails() {
+       return super.printDetails() + ", Story Mode: " + storyMode;
    }
     
-        public String toString(){
-        return super.toString() + "/ Story Mode:" + storyMode;
+    public String toString(){
+       return super.toString() + "/ Story Mode:" + storyMode;
    }
 }
