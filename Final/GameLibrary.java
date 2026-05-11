@@ -23,7 +23,9 @@ public class GameLibrary
         games = new HashMap<>();
         
     }
-
+    public Game getGameById(int gameId){
+        return games.get(gameId);
+    }
     public void addGame(Game game) {
        if (game != null) {
         games.put(game.getId(), game);

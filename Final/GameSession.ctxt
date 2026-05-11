@@ -1,11 +1,19 @@
 #BlueJ class context
 comment0.target=GameSession
-comment0.text=\n\ D\u00E9crivez\ votre\ classe\ GameSession\ ici.\n\n\ @author\ (Pamjot\ et\ Nicole)\n\ @version\ (un\ num\u00E9ro\ de\ version\ ou\ une\ date)\n
-comment1.params=game\ duration
-comment1.target=GameSession(Game,\ int)
-comment1.text=\n\ Constructeur\ d'objets\ de\ classe\ GameSession\n
-comment2.params=
-comment2.target=void\ startSession()
+comment0.text=\r\n\ D\u00E9crivez\ votre\ classe\ GameSession\ ici.\r\n\r\n\ @author\ (Pamjot\ et\ Nicole)\r\n\ @version\ (un\ num\u00E9ro\ de\ version\ ou\ une\ date)\r\n
+comment1.params=game\ sessionType
+comment1.target=GameSession(Game,\ java.lang.String)
+comment1.text=\r\n\ Constructeur\ d'objets\ de\ classe\ GameSession\r\n
+comment2.params=name
+comment2.target=void\ addPlayer(java.lang.String)
 comment3.params=
-comment3.target=java.lang.String\ toString()
-numComments=4
+comment3.target=void\ startSession()
+comment4.params=
+comment4.target=void\ endSession()
+comment5.params=comment
+comment5.target=void\ addComment(java.lang.String)
+comment6.params=
+comment6.target=void\ printSessionReport()
+comment7.params=
+comment7.target=java.lang.String\ toString()
+numComments=8
