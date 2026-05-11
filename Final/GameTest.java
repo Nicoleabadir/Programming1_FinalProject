@@ -29,6 +29,12 @@ public class GameTest
         System.out.println(game.getRating()); // expected: 8
     }
     
+    public void addGame(){
+        Game game1 = new Game(7890, "WWE", Genre.SPORTS, AgeRating.EVERYONE, gamePlatForm.PLAYSTATION);
+        Game game2 = new Game(1234, "FIFA", Genre.SPORTS, AgeRating.EVERYONE, gamePlatForm.PS5);
+        Game game3 = new Game(9568, "PUBG", Genre.ACTION,AgeRating.MATURE, gamePlatForm.PLAYSTATION);
+    }
+    
     public void testEquals() {
         Game game1 = new Game(34567, "FIFA", Genre.SPORTS, AgeRating.KIDS, gamePlatForm.PS5);
         Game game2 = new Game(34567, "FIFA", Genre.SPORTS, AgeRating.KIDS, gamePlatForm.PS5);

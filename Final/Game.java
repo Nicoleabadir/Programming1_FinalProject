@@ -112,7 +112,12 @@ public class Game
     }
     
     public String printDetails(){
-        return ("ID: " +id+ ", Title: " +title+ ", Genre: " +genre+ ", Plat Form: " +gamePlatForm+ ", Age Rating: " +ageRating+ ", Rating: " +rating);
+        return ("ID: " +id+
+                ", Title: " +title+
+                ", Genre: " +genre+
+                ", Plat Form: " +gamePlatForm+
+                ", Age Rating: " +ageRating+
+                ", Rating: " +rating);
     }
     
     public String toString() {
