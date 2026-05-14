@@ -30,6 +30,11 @@ public class GameLibrary
     public int getNumberOfGames() {
         return games.size();
     }
+    public void addGames(String title, Genre genre, AgeRating ageRating, gamePlatForm platform) {
+        Game game = new Game(nextId, title, genre, ageRating, platform);
+        games.put(nextId, game);
+        nextId++;
+    }
 
     public void printLibraryDetails(){
         System.out.println("======= Game Library Details =================");

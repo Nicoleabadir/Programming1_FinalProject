@@ -11,6 +11,7 @@ import java.util.Scanner;
 public class Main
 {
     private static Scanner input = new Scanner(System.in);
+    private static GameLibrary gameLibrary = new GameLibrary();
 
     public static void main(String[] args)
     {
@@ -53,6 +54,10 @@ public class Main
                 case 9:
                     showAboutProject();
                     break;
+                case 19:
+                    addNewGame();
+                    break;
+
                 case 0:
                     System.out.println("Thank you for using the Game Library System. Goodbye!");
                     break;
@@ -108,6 +113,7 @@ public class Main
         System.out.println("16. Leaderboard");
         System.out.println("17. Admin panel");
 
+        System.out.println("19. Add a new game");
         System.out.println();
 
         System.out.println(" PROJECT INFORMATION");
@@ -123,7 +129,7 @@ public class Main
 
     public static int getUserChoice()
     {
-        System.out.println("Enter your choice: ");
+        System.out.print("Enter your choice: ");
         int choice = input.nextInt();
         input.nextLine();
         return choice;
@@ -169,6 +175,41 @@ public class Main
         System.out.println("- Minecraft Multiplayer");
         System.out.println("These games allow more than one player.");
     }
+    public static void addNewGame() {
+            System.out.println("ADD NEW GAME");
+        System.out.println("---------------------------------------");
+
+        input.nextLine(); // clear buffer
+
+        System.out.print("Enter game title: ");
+        String title = input.nextLine();
+
+        System.out.println("Choose Genre:");
+        for (Genre g : Genre.values()) {
+            System.out.println("- " + g);
+        }
+        System.out.print("Enter genre: ");
+        Genre genre = Genre.valueOf(input.nextLine().toUpperCase());
+
+        System.out.println("Choose Age Rating:");
+        for (AgeRating a : AgeRating.values()) {
+            System.out.println("- " + a);
+        }
+        System.out.print("Enter age rating: ");
+        AgeRating ageRating = AgeRating.valueOf(input.nextLine().toUpperCase());
+    
+            System.out.println("Choose Platform:");
+        for (gamePlatForm p : gamePlatForm.values()) {
+        System.out.println("- " + p);
+        }
+        System.out.print("Enter platform: ");
+        gamePlatForm platform = gamePlatForm.valueOf(input.nextLine().toUpperCase());
+    
+        // Add the game to the library
+        gameLibrary.addGames(title, genre, ageRating, platform);
+    
+        System.out.println("Game added successfully!");
+    }
 
     public static void showGameDetails()
     {
@@ -213,6 +254,7 @@ public class Main
         System.out.println("Online games: 3");
         System.out.println("Multiplayer games: 3");
         System.out.println("Average rating: 4.4/5");
+        System.out.println(gameLibrary.getNumberOfGames());
     }
 
     public static void showAboutProject()

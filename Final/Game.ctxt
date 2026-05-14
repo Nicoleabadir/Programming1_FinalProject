@@ -1,9 +1,9 @@
 #BlueJ class context
 comment0.target=Game
-comment0.text=\n\ D\u00E9crivez\ votre\ classe\ Game\ ici.\n\n\ @author\ (Nicole\ Abadir)\n\ @version\ (un\ num\u00E9ro\ de\ version\ ou\ une\ date)\n
+comment0.text=\r\n\ D\u00E9crivez\ votre\ classe\ Game\ ici.\r\n\r\n\ @author\ (Nicole\ Abadir)\r\n\ @version\ (un\ num\u00E9ro\ de\ version\ ou\ une\ date)\r\n
 comment1.params=id\ title\ genre\ ageRating\ gamePlatForm
 comment1.target=Game(int,\ java.lang.String,\ Genre,\ AgeRating,\ gamePlatForm)
-comment1.text=\n\ Constructeur\ d'objets\ de\ classe\ Game\n
+comment1.text=\r\n\ Constructeur\ d'objets\ de\ classe\ Game\r\n
 comment10.params=
 comment10.target=boolean\ canPlay()
 comment11.params=
