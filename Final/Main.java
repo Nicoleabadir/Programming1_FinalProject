@@ -123,7 +123,7 @@ public class Main
 
     public static int getUserChoice()
     {
-        System.out.print("Enter your choice: ");
+        System.out.println("Enter your choice: ");
         int choice = input.nextInt();
         input.nextLine();
         return choice;
