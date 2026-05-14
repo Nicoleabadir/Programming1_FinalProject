@@ -65,22 +65,14 @@ public class GameLibrary
             System.out.println(id +"-------"+ games.get(id).getTitle());
         }
     }
-    public void listByGenre(Genre genre){
-      int index = 0;
-        while (index < games.size()){
-        if(games.get(index).getGenre() == genre){
-                System.out.println(games.get(index));
+    public void listByGenre(Genre genre) {
+        for (Game g : games.values()) {
+            if (g.getGenre() == genre) {
+                System.out.println(g);
             }
-            index++;
-    
-        while (index < games.size()){
-            if(games.get(index).getGenre() == genre){
-                System.out.println(games.get(index));
-            }
-            index++;
-        }   
-      } 
+        }
     }
+
     public Game getTopRatedGame() {
          if (games.size() == 0) {
              return null;
