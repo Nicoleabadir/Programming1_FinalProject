@@ -54,7 +54,7 @@ public class RatingLibrary
     }   
         public double getAverageRating(int gameId) {
         if (!ratings.containsKey(gameId)) {
-            return -1; // no ratings
+            return -1; // no in it gang ratings
         }
     
         ArrayList<Integer> list = ratings.get(gameId);
@@ -92,10 +92,6 @@ public class RatingLibrary
             System.out.println("- " + c);
         }
     }
-
-    
-    
-    
     
     /**
      * Un exemple de méthode - remplacez ce commentaire par le vôtre
