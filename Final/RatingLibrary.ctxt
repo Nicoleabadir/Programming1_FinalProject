@@ -1,9 +1,9 @@
 #BlueJ class context
 comment0.target=RatingLibrary
-comment0.text=\r\n\ D\u00E9crivez\ votre\ classe\ RatingLibrary\ ici.\r\n\r\n\ @author\ (Pamjot)\r\n\ @version\ (un\ num\u00E9ro\ de\ version\ ou\ une\ date)\r\n
+comment0.text=\n\ D\u00E9crivez\ votre\ classe\ RatingLibrary\ ici.\n\n\ @author\ (Pamjot)\n\ @version\ (un\ num\u00E9ro\ de\ version\ ou\ une\ date)\n
 comment1.params=gameLibrary
 comment1.target=RatingLibrary(GameLibrary)
-comment1.text=\r\n\ Constructeur\ d'objets\ de\ classe\ RatingLibrary\r\n
+comment1.text=\n\ Constructeur\ d'objets\ de\ classe\ RatingLibrary\n
 comment2.params=gameId\ rating
 comment2.target=void\ rateGame(int,\ int)
 comment3.params=gameId\ comment
