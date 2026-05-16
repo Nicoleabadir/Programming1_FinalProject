@@ -1,4 +1,5 @@
 package Final;
+import java.util.ArrayList;
 
 
 /**
@@ -11,6 +12,7 @@ public class SinglePlayerGame extends Game
 {
     // instance variables - replace the example below with your own
     private boolean storyMode;
+    private ArrayList<String> games;
 
     /**
      * Constructor for objects of class SinglePlayerGame
@@ -20,6 +22,7 @@ public class SinglePlayerGame extends Game
         // initialise instance variables
         super(id, title, genre, ageRating, gamePlatForm);
         this.storyMode = storyMode;
+        games = new ArrayList<>();
     }
 
     /**
@@ -30,6 +33,18 @@ public class SinglePlayerGame extends Game
      */
     public void startGame() {
        System.out.println("Starting single-player game: " + getTitle());
+   }
+   
+   public void addGames(){
+       games.add("Minecraft");
+       games.add("Candy Crush");
+       games.add("AE Mysteries");
+   }
+   
+   public void listAllGames(){
+       for (String game : games){
+           System.out.println(game);
+       }
    }
    
    public String getGameType() {

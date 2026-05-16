@@ -13,6 +13,7 @@ public class MultiplayerGame extends Game
     // instance variables - replace the example below with your own
      private int maxPlayers;
      private ArrayList<String> players;
+     private ArrayList<String> games;
 
     /**
      * Constructor for objects of class MultiplayerGame
@@ -23,10 +24,18 @@ public class MultiplayerGame extends Game
         super(id, title, genre, ageRating, gamePlatForm);
         this.maxPlayers = maxPlayers;
         players = new ArrayList<>();
+        games = new ArrayList<>();
     }
     
     public String getGameType() {
         return "Multiplayer Game";
+    }
+    
+    public void addGames(){
+        games.add("PUBG");
+        games.add("Call Of Duty");
+        games.add("FIFA");
+        games.add("Bingo");
     }
     
     public boolean containsPlayer(String playerName) {

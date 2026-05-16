@@ -1,5 +1,6 @@
 package Final;
 import java.util.Scanner;
+import java.util.ArrayList;
 
 
 /**
@@ -12,6 +13,7 @@ public class Main
 {
     private static Scanner input = new Scanner(System.in);
     private static GameLibrary gameLibrary = new GameLibrary();
+    static ArrayList<String> games = new ArrayList<>();
 
     public static void main(String[] args)
     {
@@ -52,7 +54,42 @@ public class Main
                     showLibraryStatistics();
                     break;
                 case 9:
-                    showAboutProject();
+                    searchForGame();
+                    break;
+                case 10:
+                    viewFavoriteGames();
+                    break;
+
+                case 11:
+                    viewRecentlyPlayedGames();
+                    break;
+
+                case 12:
+                    viewGameCategories();
+                    break;
+
+                case 13:
+                    viewUserProfile();
+                    break;
+
+                case 14:
+                    viewSettings();
+                    break;
+
+                case 15:
+                    viewHelpAndSupport();
+                    break;
+
+                case 16:
+                    viewLeaderboard();
+                    break;
+
+                case 17:
+                    viewAdminPanel();
+                    break;
+
+                case 18:
+                    viewProjectInformation();
                     break;
                 case 19:
                     addNewGame();
@@ -134,6 +171,58 @@ public class Main
         input.nextLine();
         return choice;
     }
+    
+    public static void viewFavoriteGames()
+    {
+    System.out.println("Showing favorite games...");
+    }
+
+     public static void viewRecentlyPlayedGames()
+    {
+    System.out.println("Showing recently played games...");
+    }
+
+    public static void viewGameCategories()
+    {
+    System.out.println("Showing game categories...");
+    }
+
+    public static void viewUserProfile()
+    {
+    System.out.println("Showing user profile...");
+    }
+
+    public static void viewSettings()
+    {
+    System.out.println("Opening settings...");
+    }
+
+    public static void viewHelpAndSupport()
+    {
+    System.out.println("Help and support:");
+    System.out.println("Choose an option from the menu by typing its number.");
+    }
+
+    public static void viewLeaderboard()
+    {
+    System.out.println("Showing leaderboard...");
+    }
+
+    public static void viewAdminPanel()
+    {
+    System.out.println("Opening admin panel...");
+    }
+    
+    public static void searchForGame()
+    {
+    System.out.println("Searching for a game...");
+    }
+
+    public static void viewProjectInformation()
+    {
+      System.out.println("Project Information:");
+      System.out.println("This program is a game library system.");
+    }
 
     public static void showAllGames()
     {
@@ -173,8 +262,11 @@ public class Main
         System.out.println("- Mario Kart");
         System.out.println("- Among Us");
         System.out.println("- Minecraft Multiplayer");
+        System.out.println("- PUBG");
+        System.out.println("- Call Of Duty");
         System.out.println("These games allow more than one player.");
     }
+    
     public static void addNewGame() {
             System.out.println("ADD NEW GAME");
         System.out.println("---------------------------------------");
@@ -249,12 +341,18 @@ public class Main
     {
         System.out.println("LIBRARY STATISTICS");
         System.out.println("---------------------------------------");
-        System.out.println("Total games: 5");
+        System.out.println("Total games:" + games.size());
         System.out.println("Single player games: 3");
         System.out.println("Online games: 3");
         System.out.println("Multiplayer games: 3");
         System.out.println("Average rating: 4.4/5");
         System.out.println(gameLibrary.getNumberOfGames());
+    }
+    
+     public static void addNewGame(String gameName)
+    {
+        games.add(gameName);
+        System.out.println(gameName + " added successfully.");
     }
 
     public static void showAboutProject()
