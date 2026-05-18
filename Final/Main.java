@@ -6,14 +6,14 @@ import java.util.ArrayList;
 /**
  * Write a description of class Main here.
  *
- * @author (your name)
+ * @author (Nicole Abadir)
  * @version (a version number or a date)
  */
 public class Main
 {
     private static Scanner input = new Scanner(System.in);
     private static GameLibrary gameLibrary = new GameLibrary();
-    static ArrayList<String> games = new ArrayList<>();
+    static ArrayList<Game> games = new ArrayList<>();
 
     public static void main(String[] args)
     {
@@ -65,7 +65,7 @@ public class Main
                     break;
 
                 case 12:
-                    viewGameCategories();
+                    showGameCategories(games);
                     break;
 
                 case 13:
@@ -93,6 +93,9 @@ public class Main
                     break;
                 case 19:
                     addNewGame();
+                    break;
+                case 20:
+                    showAllGames(games);
                     break;
 
                 case 0:
@@ -149,13 +152,15 @@ public class Main
         System.out.println("15. Help and support");
         System.out.println("16. Leaderboard");
         System.out.println("17. Admin panel");
-
-        System.out.println("19. Add a new game");
-        System.out.println();
-
+        
         System.out.println(" PROJECT INFORMATION");
         System.out.println("------------------------------------------------------");
         System.out.println("18. About this project");
+
+        System.out.println("19. Add a new game");
+        System.out.println();
+        
+        System.out.println("20. Show all games");
 
         System.out.println();
 
@@ -170,6 +175,14 @@ public class Main
         int choice = input.nextInt();
         input.nextLine();
         return choice;
+    }
+    
+    public static void showGameCategories(ArrayList<Game> games) {
+        System.out.println("\n--- Game Categories ---");
+
+        for (Game game : games) {
+        System.out.println(game.getTitle() + " - " + game.getCategory());
+        }
     }
     
     public static void viewFavoriteGames()
@@ -299,6 +312,10 @@ public class Main
     
         // Add the game to the library
         gameLibrary.addGames(title, genre, ageRating, platform);
+        Game newGame = new Game(games.size() + 1, title, genre, ageRating, platform);
+        games.add(newGame);
+
+        System.out.println("Games in list: " + games.size());
     
         System.out.println("Game added successfully!");
     }
@@ -348,11 +365,12 @@ public class Main
         System.out.println("Average rating: 4.4/5");
         System.out.println(gameLibrary.getNumberOfGames());
     }
-    
-     public static void addNewGame(String gameName)
-    {
-        games.add(gameName);
-        System.out.println(gameName + " added successfully.");
+
+    public static void showAllGames(ArrayList<Game> games) {
+       System.out.println("---- All Games ----");
+       for (Game game : games) {
+        System.out.println(game.getTitle() + " - " + game.getGenre());
+       }
     }
 
     public static void showAboutProject()

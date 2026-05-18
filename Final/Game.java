@@ -15,6 +15,7 @@ public class Game
     private AgeRating ageRating;
     private gamePlatForm gamePlatForm;
     private double rating;
+    private String category;
 
     /**
      * Constructeur d'objets de classe Game
@@ -28,11 +29,21 @@ public class Game
         this.gamePlatForm = gamePlatForm;
         this.ageRating = ageRating;
         this.rating = 0; 
+        this.category = category;
         
+    }
+    
+    public Game(String title, String category) {
+    this.title = title;
+    this.category = category;
     }
     
     public Genre getGenre(){
         return genre;
+    }
+    
+    public String getCategory() {
+    return category;
     }
     
     public boolean matchesGenre(Genre genre) { 
